@@ -3,7 +3,7 @@
 <% else %>
   <p>These are the current books in our system</p>
   <ul id = "subjects">
-    <% Subject.find(:all).each do |c| %>
+    <% @subjects.each do |c| %>
       <li><%= link_to c.name, :action => "show_subjects", :id => c.id %></li>
     <% end %>
   </ul>
